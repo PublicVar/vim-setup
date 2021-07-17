@@ -42,10 +42,6 @@ set incsearch
 " Ignore capital letters during search.
 set ignorecase
 
-" Override the ignorecase option if searching for capital letters.
-" This will allow you to search specifically for capital letters.
-set smartcase
-
 " Show partial command you type in the last line of the screen.
 set showcmd
 
