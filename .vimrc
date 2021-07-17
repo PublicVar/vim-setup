@@ -81,6 +81,8 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
+" Set the comma as the leader key.
+let mapleader = ","
 " PLUGINS -------------------------------------------------------------------  
 
 " Airline 
@@ -108,4 +110,7 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
+" Cosco
+autocmd FileType javascript,css,php nmap <silent> <Leader>; <Plug>(cosco-commaOrSemiColon)
+autocmd FileType javascript,css,php imap <silent> <Leader>; <c-o><Plug>(cosco-commaOrSemiColon)
 
