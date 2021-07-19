@@ -79,6 +79,9 @@ set foldlevel=2
 
 " Set the comma as the leader key.
 let mapleader = ","
+
+
+
 " PLUGINS -------------------------------------------------------------------  
 
 " Airline 
@@ -98,15 +101,23 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
+" Shorcuts ------------------------------------------------------------------
+
 " NERDTree SHORTCUTS
 nnoremap <leader>n :NERDTreeFocus<CR>
 " Go the panel
 nnoremap <C-n> :NERDTree<CR>
 " Hide and show the panel
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 
 " Cosco
 autocmd FileType javascript,css,php nmap <silent> <Leader>; <Plug>(cosco-commaOrSemiColon)
 autocmd FileType javascript,css,php imap <silent> <Leader>; <c-o><Plug>(cosco-commaOrSemiColon)
 
+" Move lines up and down (normal, insert, visual mode)
+nnoremap j :m .+1<CR>==
+nnoremap k :m .-2<CR>==
+inoremap j <Esc>:m .+1<CR>==gi
+inoremap k <Esc>:m .-2<CR>==gi
+vnoremap j :m '>+1<CR>gv=gv
+vnoremap k :m '<-2<CR>gv=gv
