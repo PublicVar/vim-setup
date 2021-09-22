@@ -115,9 +115,9 @@ autocmd FileType javascript,css,php nmap <silent> <Leader>; <Plug>(cosco-commaOr
 autocmd FileType javascript,css,php imap <silent> <Leader>; <c-o><Plug>(cosco-commaOrSemiColon)
 
 " Move lines up and down (normal, insert, visual mode)
-nnoremap j :m .+1<CR>==
-nnoremap k :m .-2<CR>==
-inoremap j <Esc>:m .+1<CR>==gi
-inoremap k <Esc>:m .-2<CR>==gi
-vnoremap j :m '>+1<CR>gv=gv
-vnoremap k :m '<-2<CR>gv=gv
+nnoremap J :m .+1<CR>==
+nnoremap K :m .-2<CR>==
+inoremap J <Esc>:m .+1<CR>==gi
+inoremap K <Esc>:m .-2<CR>==gi
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
